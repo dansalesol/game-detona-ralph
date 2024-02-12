@@ -6,7 +6,6 @@ const state = {
         score: document.querySelector("#score"),
         lives: document.querySelector("#lives"),
         level: document.querySelector("#level"),
-        backgroundSong: document.querySelector("#play-botton"),
         gameOverMessage: document.createElement("div"),
 
     },
@@ -36,11 +35,9 @@ function countDown() {
 }
 
 function playSound(audioName) {
-    if(!this.loop) { 
         let audio = new Audio(`./src/audios/${audioName}.m4a`);
         audio.volume = 0.2;
         audio.play();
-    }    
 }
 
 function randomSquare() {
